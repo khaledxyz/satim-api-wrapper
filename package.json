@@ -1,0 +1,46 @@
+{
+  "name": "satim-api-wrapper",
+  "version": "0.0.0",
+  "description": "A typescript wrapper for SATIM payments API.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "release": "pnpm run build && changeset publish"
+  },
+  "keywords": [],
+  "author": "khaledxyz <me@khaledxyz.com> (https://khaledxyz.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khaledxyz/satim-wrapper"
+  },
+  "prettier": "@vercel/style-guide/prettier",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.10.0",
+    "@vercel/style-guide": "^5.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 6"
+  }
+}
